@@ -18,29 +18,6 @@
 > 5. 使用ip:8000/predict是post的地址，使用python C-CNN-SA-client.py即可模拟请求，注意模型第一次初始化的时间因为需要加载预训练模型，推理速度有些慢，目前单机单线曾运行的正常推理速度在100ms之内，多进程部署会继续提速
 
 
-## 代码结构：使用前后分离的结构，完全使用Python实现
-
-> 1. C-CNN-SA-server.py表示后端的model api，直接通过get传参的形式进行，直接搭配nginx+Gunicorn部署即可
-> 2. C-CNN-SA-client.py表示模型前端的调用，传入用户的UGC内容，然后使用TextCNN的模型进行识别，模型第一次初始化的时间因为需要加载预训练模型，推理速度有些慢，目前单机单线曾运行的正常推理速度在100ms之内，多进程部署会继续提速
-
-
-> 后端启动打印的log
-
-<div align=center><img  src="https://github.com/CarryChang/C-CNN-for-Chinese-Sentiment-Analysis/blob/master/pic/api_time_used.png"></div>
-
-> 前端启动打印的结果
-
-<div align=center><img  src="https://github.com/CarryChang/C-CNN-for-Chinese-Sentiment-Analysis/blob/master/pic/restful_api.png"></div>
-
-> Jupyter notebook 打印的结果
-
-<div align=center><img  src="https://github.com/CarryChang/C-CNN-for-Chinese-Sentiment-Analysis/blob/master/pic/result.png"></div>
-
-
-> 本地Pycharm输出的结果
-
-<div align=center><img  src="https://github.com/CarryChang/C-CNN-for-Chinese-Sentiment-Analysis/blob/master/pic/client.png"></div>
-
 
 ### 基于字符级卷积神经的中文情感分析：
 1. 将顾客打分和评论情感进行两极映射，使用数据自动标注和基于弱监督预训练的数据增强方式自动扩充和优化数据集，实验证实了在情感分类中，使用本文的字符级卷积神经网络(C-CNN-SA)可以在不依赖分词的情况下，达到的精度和 F 值均高于词级粒度
