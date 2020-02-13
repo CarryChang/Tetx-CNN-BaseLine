@@ -32,10 +32,7 @@ if __name__ == "__main__":
     # print(y_pred)
     print('acc:{}'.format(accuracy_score(y_true, y_pred)))
     print('time used :{}'.format(time.time()-st))
-    # snownlp : acc:0.9375
-    # time used :14.206809282302856
     # acc:0.941
     # time used :13.918262243270874
-    #
 
 
