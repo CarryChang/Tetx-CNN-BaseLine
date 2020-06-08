@@ -14,7 +14,7 @@
 
 > 1. 首先在服务器上部署虚拟环境 ,假设虚拟环境在/home,cd /home 进入home
 > 2. 在hoem文件夹中使用python3 -m venv v1创建虚拟环境,v1就是虚拟环境的名字，然后使用souce v1/bin/activate加载虚拟环境
-> 4. 在虚拟环境下使用pip install -r requirement.txt 安装所需要的库，然后使用chmod +777 restart.sh部署模型的后端
+> 4. 在虚拟环境下使用pip install -r requirement.txt 安装所需要的库，然后使用chmod +x restart.sh部署模型的后端
  
 
 ### 基于字符级卷积神经的中文情感分析：
